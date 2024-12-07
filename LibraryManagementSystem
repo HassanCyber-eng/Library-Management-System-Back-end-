@@ -1,0 +1,16 @@
+public class LibraryManagementSystem {
+    public static void main(String[] args) {
+        Library library = new Library();
+
+        // Add books
+        library.addBook(new FictionBook(1, "Harry Potter", "J.K. Rowling", "Fantasy"));
+
+        // Add members
+        library.addMember(new RegularMember(101, "Alice"));
+        library.addMember(new PremiumMember(102, "Bob"));
+
+        // Borrow and return books
+        library.borrowBook(1, 101); // Alice borrows Harry Potter
+        library.returnBook(1, 101, 3); // Alice returns after 3 days
+    }
+}
